@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "queue.h"
-
 // Local functions
 static void CopyToNode(Item item, Node * pn);
 static void CopyToItem(Node * pn, Item * pi);
@@ -36,7 +35,7 @@ bool EnQueue(Item item, Queue * pq)			// "Item" as just int types??
 											// How it's working? Is it formal param or actual arg? 
 		return false;
 	pnew = (Node *) malloc(sizeof(Node));	// Need some explanation
-	if (pnew == NULL)
+	if (pnew == NULL)						// forgot '==''
 	{
 		fprintf(stderr, "Can't allocate memory\n");
 		exit(1);
